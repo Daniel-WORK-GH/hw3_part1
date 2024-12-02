@@ -4,7 +4,9 @@ using UnityEngine.UI;
 public class ScreenSizeKeeper : MonoBehaviour
 {    
     // https://discussions.unity.com/t/how-to-change-size-of-the-camera-depending-on-the-aspect-ratio/809120/7
-    [SerializeField] private Camera cam;
+
+    [SerializeField]
+    private Camera cam;
  
     private readonly Vector2 targetAspectRatio = new Vector2(16,9);
     private readonly Vector2 rectCenter = new Vector2(0.5f, 0.5f);
