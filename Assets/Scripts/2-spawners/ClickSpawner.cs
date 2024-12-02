@@ -5,21 +5,26 @@ using UnityEngine.InputSystem;
  * This component spawns the given object whenever the player clicks a given key.
  */
 public class ClickSpawner : MonoBehaviour {
-    [SerializeField] protected InputAction spawnAction = new InputAction(type: InputActionType.Button);
-    [SerializeField] protected GameObject prefabToSpawn;
-    [SerializeField] protected Vector3 velocityOfSpawnedObject;
+    [SerializeField] 
+    protected InputAction spawnAction = new InputAction(type: InputActionType.Button);
 
-    void OnEnable()  
+    [SerializeField] 
+    protected GameObject prefabToSpawn;
+
+    [SerializeField] 
+    protected Vector3 velocityOfSpawnedObject;
+
+    void OnEnable()
     {
         spawnAction.Enable();
     }
 
-    void OnDisable()  
+    void OnDisable()
     {
         spawnAction.Disable();
     }
 
-    protected virtual GameObject spawnObject() 
+    protected virtual GameObject spawnObject()
     {
         //Debug.Log("Spawning a new object");
 
@@ -38,7 +43,7 @@ public class ClickSpawner : MonoBehaviour {
         return newObject;
     }
     
-    private void Update() 
+    private void Update()
     {
         if (spawnAction.WasPressedThisFrame()) 
         {

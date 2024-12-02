@@ -13,7 +13,7 @@ public class LaserShooter : ClickSpawner
 
     // A reference to the TEXT that holds the score that has to be updated when the laser hits its target.
     [Tooltip("Score text")]
-    public TMP_Text scoreText;  
+    public TMP_Text scoreText;
 
     private void Start()
     {
@@ -22,7 +22,7 @@ public class LaserShooter : ClickSpawner
 
     protected override GameObject spawnObject()
     {
-        GameObject newObject = base.spawnObject();  // base = super
+        GameObject newObject = base.spawnObject(); // base = super
 
         // Modify the text field of the new object.
         ScoreAdder newObjectScoreAdder = newObject.GetComponent<ScoreAdder>();

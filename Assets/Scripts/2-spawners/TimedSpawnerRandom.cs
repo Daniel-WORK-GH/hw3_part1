@@ -7,12 +7,26 @@ using UnityEngine;
  */
 public class TimedSpawnerRandom : MonoBehaviour
 {
-    [SerializeField] Mover prefabToSpawn;
-    [SerializeField] Vector3 velocityOfSpawnedObject;
-    [Tooltip("Minimum time between consecutive spawns, in seconds")] [SerializeField] float minTimeBetweenSpawns = 0.2f;
-    [Tooltip("Maximum time between consecutive spawns, in seconds")] [SerializeField] float maxTimeBetweenSpawns = 1.0f;
-    [Tooltip("Maximum distance in X between spawner and spawned objects, in meters")] [SerializeField] float maxXDistance = 1.5f;
-    [SerializeField] Transform parentOfAllInstances;
+    [SerializeField] 
+    Mover prefabToSpawn;
+
+    [SerializeField] 
+    Vector3 velocityOfSpawnedObject;
+
+    [Tooltip("Minimum time between consecutive spawns, in seconds")] 
+    [SerializeField] 
+    float minTimeBetweenSpawns = 0.2f;
+
+    [Tooltip("Maximum time between consecutive spawns, in seconds")] 
+    [SerializeField] 
+    float maxTimeBetweenSpawns = 1.0f;
+
+    [Tooltip("Maximum distance in X between spawner and spawned objects, in meters")] 
+    [SerializeField] 
+    float maxXDistance = 1.5f;
+
+    [SerializeField] 
+    Transform parentOfAllInstances;
 
     void Start()
     {
@@ -24,8 +38,8 @@ public class TimedSpawnerRandom : MonoBehaviour
         while (true)
         {
             float timeBetweenSpawnsInSeconds = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
-            await Awaitable.WaitForSecondsAsync(timeBetweenSpawnsInSeconds);       // co-routines
-            if (!this) break;   // might be destroyed when moving to a new scene
+            await Awaitable.WaitForSecondsAsync(timeBetweenSpawnsInSeconds); // co-routines
+            if (!this) break; // might be destroyed when moving to a new scene
             Vector3 positionOfSpawnedObject = new Vector3(
                 transform.position.x + Random.Range(-maxXDistance, +maxXDistance),
                 transform.position.y,

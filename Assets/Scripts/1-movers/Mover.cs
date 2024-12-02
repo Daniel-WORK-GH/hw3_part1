@@ -8,7 +8,7 @@
 public class Mover : MonoBehaviour
 {
     [Tooltip("Movement vector in meters per second")]
-    [SerializeField] 
+    [SerializeField]
     Vector3 velocity;
 
     void Update()
