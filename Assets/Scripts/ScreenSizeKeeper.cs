@@ -1,10 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScreenSizeKeeper : MonoBehaviour
-{    
-    // https://discussions.unity.com/t/how-to-change-size-of-the-camera-depending-on-the-aspect-ratio/809120/7
-
+public class ScreenSizeKeeper : MonoBehaviour //https://discussions.unity.com/t/how-to-change-size-of-the-camera-depending-on-the-aspect-ratio/809120/7
+{
     [SerializeField]
     private Camera cam;
  

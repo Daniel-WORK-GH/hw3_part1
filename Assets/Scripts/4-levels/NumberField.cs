@@ -6,7 +6,7 @@ using UnityEngine;
  * It allows to feed an integer number to the text field.
  */
 [RequireComponent(typeof(TextMeshPro))]
-public class NumberField : MonoBehaviour 
+public class NumberField : MonoBehaviour
 {
     private int number;
 
