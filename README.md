@@ -1,42 +1,9 @@
-# Unity week 2: Formal elements
+# Assignment part 1
+I chose to make the 2 suggestion - make the score stationary and make the screen the same size for every aspect ratio.
 
-A project with step-by-step scenes illustrating some of the formal elements of game development in Unity, including: 
+I removed the label under the player and added a canvas with text. Next i modified the [ScoreAdder](https://github.com/Daniel-WORK-GH/hw3_part1/blob/master/Assets/Scripts/3-collisions/ScoreAdder.cs) 
+to work with TMP_Text.
 
-* Prefabs for instantiating new objects;
-* Colliders for triggering outcomes of actions;
-* Coroutines for setting time-based rules.
+After the score was counting i made the canvas a single ton by name using the give [script](https://github.com/Daniel-WORK-GH/hw3_part1/blob/master/Assets/Scripts/4-levels/SingletonByName.cs). After that i had to make sure the canvas will update its camera when switching levels so the text could show, i made a simple class called [CanvasCameaUpdater](https://github.com/Daniel-WORK-GH/hw3_part1/blob/master/Assets/Scripts/CanvasCameaUpdater.cs).
 
-Text explanations are available 
-[here](https://github.com/gamedev-at-ariel/gamedev-5782) in folder 04.
-
-## Cloning
-To clone the project, you may need to install git lfs first (if it is not already installed):
-
-    git lfs install 
-
-To clone faster, you can limit the depth to 1 like this:
-
-    git clone --depth=1 https://github.com/<repository-name>.git
-
-When you first open this project, you may not see the text in the score field.
-This is because `TextMeshPro` is not in the project.
-The Unity Editor should hopefully prompt you to import TextMeshPro;
-once you do this, re-open the scenes, and you should be able to see the texts.
-
-
-
-## Credits
-
-Programming:
-* Maoz Grossman
-* Erel Segal-Halevi
-
-Online courses:
-* [The Ultimate Guide to Game Development with Unity 2019](https://www.udemy.com/the-ultimate-guide-to-game-development-with-unity/), by Jonathan Weinberger
-
-Graphics:
-* [Matt Whitehead](https://ccsearch.creativecommons.org/photos/7fd4a37b-8d1a-4d4c-80a2-4ca4a3839941)
-* [Kenney's space kit](https://kenney.nl/assets/space-kit)
-* [Ductman's 2D Animated Spacehips](https://assetstore.unity.com/packages/2d/characters/2d-animated-spaceships-96852)
-* [Franc from the Noun Project](https://commons.wikimedia.org/w/index.php?curid=64661575)
-* [Greek-arrow-animated.gif by Andrikkos is licensed under CC BY-SA 3.0](https://search.creativecommons.org/photos/2db102af-80d0-4ec8-9171-1ac77d2565ce)
+After the score and canvas were done i only had to make the screen the same size on all devices. I found a froum that talked about this issue so i made [ScreenSizeKeeper](https://github.com/Daniel-WORK-GH/hw3_part1/blob/master/Assets/Scripts/ScreenSizeKeeper.cs).
