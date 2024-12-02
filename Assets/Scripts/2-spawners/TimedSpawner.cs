@@ -12,7 +12,7 @@ public class TimedSpawner : MonoBehaviour
 
     [SerializeField]
     Vector3 velocityOfSpawnedObject;
-    
+
     [SerializeField]
     float secondsBetweenSpawns = 1f;
 
@@ -42,7 +42,7 @@ public class TimedSpawner : MonoBehaviour
 
     async void SpawnRoutine()
     {
-        while (true) 
+        while (true)
         {
             GameObject newObject = Instantiate(prefabToSpawn.gameObject, transform.position, Quaternion.identity);
             newObject.GetComponent<Mover>().SetVelocity(velocityOfSpawnedObject);
