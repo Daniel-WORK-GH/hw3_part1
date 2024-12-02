@@ -7,10 +7,9 @@ using UnityEngine;
  */
 public class CollisionLogger : MonoBehaviour
 {
-    
     private void Start()
     {
-        Debug.Log($"Start CollisionLogger on {this.name}"   );
+        Debug.Log($"Start CollisionLogger on {this.name}");
     }
 
     private void OnTriggerEnter2D(Collider2D other)
