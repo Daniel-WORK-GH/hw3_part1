@@ -8,6 +8,6 @@ using UnityEngine;
 [RequireComponent(typeof(NumberField))]
 public class GameStatusReader : MonoBehaviour {
     void Start() {
-        GetComponent<NumberField>().SetNumber(GAME_STATUS.playerScore);
+        GetComponent<NumberField>().SetNumber(GameStatusTracker.playerScore);
     }
 }

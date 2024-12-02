@@ -12,8 +12,8 @@ public class ScoreAdder : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == triggeringTag && scoreField!=null) {
-            GAME_STATUS.playerScore += pointsToAdd;
-            scoreField.text = "Score : " + GAME_STATUS.playerScore;
+            GameStatusTracker.playerScore += pointsToAdd;
+            scoreField.text = "Score : " + GameStatusTracker.playerScore;
         }
     }
 
