@@ -1,4 +1,7 @@
 # Assignment part 1
+
+### Itch.io : https://daniel-work-gh.itch.io/part-1
+
 I chose to make the 2 suggestion - make the score stationary and make the screen the same size for every aspect ratio.
 
 I removed the label under the player and added a canvas with text. Next i modified the [ScoreAdder](https://github.com/Daniel-WORK-GH/hw3_part1/blob/master/Assets/Scripts/3-collisions/ScoreAdder.cs) 
