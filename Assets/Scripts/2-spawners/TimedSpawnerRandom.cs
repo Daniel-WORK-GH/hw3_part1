@@ -7,25 +7,25 @@ using UnityEngine;
  */
 public class TimedSpawnerRandom : MonoBehaviour
 {
-    [SerializeField] 
+    [SerializeField]
     Mover prefabToSpawn;
 
-    [SerializeField] 
+    [SerializeField]
     Vector3 velocityOfSpawnedObject;
 
     [Tooltip("Minimum time between consecutive spawns, in seconds")] 
-    [SerializeField] 
+    [SerializeField]
     float minTimeBetweenSpawns = 0.2f;
 
     [Tooltip("Maximum time between consecutive spawns, in seconds")] 
-    [SerializeField] 
+    [SerializeField]
     float maxTimeBetweenSpawns = 1.0f;
 
     [Tooltip("Maximum distance in X between spawner and spawned objects, in meters")] 
-    [SerializeField] 
+    [SerializeField]
     float maxXDistance = 1.5f;
 
-    [SerializeField] 
+    [SerializeField]
     Transform parentOfAllInstances;
 
     void Start()

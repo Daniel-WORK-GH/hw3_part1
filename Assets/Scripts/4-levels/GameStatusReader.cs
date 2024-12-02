@@ -6,9 +6,9 @@ using UnityEngine;
  * This component reades the "playerScore" static variable from the GAME_STATUS static class into this object's number field.
  */
 [RequireComponent(typeof(NumberField))]
-public class GameStatusReader : MonoBehaviour 
+public class GameStatusReader : MonoBehaviour
 {
-    void Start() 
+    void Start()
     {
         GetComponent<NumberField>().SetNumber(GameStatusTracker.playerScore);
     }

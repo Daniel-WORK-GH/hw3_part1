@@ -7,9 +7,14 @@ using UnityEngine;
  */
 public class TimedSpawner : MonoBehaviour
 {
-    [SerializeField] Mover prefabToSpawn;
-    [SerializeField] Vector3 velocityOfSpawnedObject;
-    [SerializeField] float secondsBetweenSpawns = 1f;
+    [SerializeField]
+    Mover prefabToSpawn;
+
+    [SerializeField]
+    Vector3 velocityOfSpawnedObject;
+    
+    [SerializeField]
+    float secondsBetweenSpawns = 1f;
 
     // OLD CODE using coroutines:
     //
