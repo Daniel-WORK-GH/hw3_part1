@@ -30,7 +30,7 @@ public class TimedSpawnerRandom : MonoBehaviour
 
     void Start()
     {
-         SpawnRoutine();
+        SpawnRoutine();
     }
 
     async void SpawnRoutine()

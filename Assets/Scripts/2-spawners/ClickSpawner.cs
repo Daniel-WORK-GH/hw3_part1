@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 /**
  * This component spawns the given object whenever the player clicks a given key.
  */
-public class ClickSpawner : MonoBehaviour {
+public class ClickSpawner : MonoBehaviour 
+{
     [SerializeField]
     protected InputAction spawnAction = new InputAction(type: InputActionType.Button);
 
@@ -33,14 +34,14 @@ public class ClickSpawner : MonoBehaviour {
 
         // Step 2: modify the velocity of the new object.
         Mover newObjectMover = newObject.GetComponent<Mover>();
-        if (newObjectMover) 
+        if (newObjectMover)
         {
             newObjectMover.SetVelocity(velocityOfSpawnedObject);
         }
 
         return newObject;
     }
-    
+
     private void Update()
     {
         if (spawnAction.WasPressedThisFrame())
